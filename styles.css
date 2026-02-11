@@ -13,7 +13,7 @@ a {
     cursor: pointer;
     color: white;
 }
-.form input{
+.form input,textarea, select{
     color: white;
 }
 .comments p{
