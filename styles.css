@@ -13,7 +13,7 @@ a {
     cursor: pointer;
     color: white;
 }
-.form input,textarea, select{
+.form input,textarea, select,.chef-details p{
     color: white;
 }
 .comments p{
