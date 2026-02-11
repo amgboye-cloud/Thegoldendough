@@ -700,6 +700,10 @@ footer{
 
 }
 
+.det p{
+    color: #E6E6E6;
+}
+
 .ftdivide{
     display: flex;
     justify-content: space-between;
