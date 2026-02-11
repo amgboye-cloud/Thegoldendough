@@ -857,6 +857,24 @@ footer{
 }
 .txt p{
     text-align: center;
+    font-size: 21px;
+    color: #E6E6E6;
+}
+
+
+input[type="text"],input[type="email"],input[type="date"],input[type="time"],textarea, option{
+    padding: 10px;
+    font-size: 17px;
+}
+
+select{
+    font-size: 17px;
+}
+
+
+
+.txtt{
+    color: black;
     font-size: 20px;
 }
 
