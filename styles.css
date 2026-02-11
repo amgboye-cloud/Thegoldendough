@@ -10,6 +10,12 @@ a {
     cursor: pointer;
     color: white;
 }
+
+.comments p{
+    color: #E6E6E6;
+}
+
+
 p,button,label, h1,h3,h2,h4,i{
     color: white;
 }
