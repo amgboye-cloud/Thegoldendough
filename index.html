@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Golden Dough – Freshly baked pizza and dough delivered fast. Taste the golden difference in every bite. Order online today!">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oi&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sono:wght,MONO@200..800,1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<title>The Golden Dough</title>
+<link rel="icon" type="image/png" href="Images/crown.png">
+</head>
+<body>
+    <header>
+        <div class="nav-logo">
+            
+            <div class="logo">
+                <img src="Images/logo.png" alt="">
+            </div>
+            <div class="links">
+                <a href="#JHero">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#chefs">Chef</a>
+                <a href="#reserva">Contact</a>
+                <a href="#boook" class="button">Book Now</a>
+            </div>
+
+        <div class="menu-cont" onclick="show()" id="mmm">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+            <div class="x" id="xxxx" onclick="hide()">
+                <div class="stroke one"></div>
+                <div class="stroke two"></div>
+            </div>
+
+        </div>
+
+
+
+        <!--Mobile nav-->
+        <div class="mobile-menu" id="mobileMenu">
+
+             <div class=" mobile">
+                <a href="#JHero">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#chefs">Chef</a>
+                <a href="#conta">Contact</a>
+                <a href="#boook" class="mb-mode">Book Now</a>
+            </div>
+        </div>
+
+
+
+
+
+    </header>
+
+    <div class="carrr ">
+<div class="cart-icon">
+    <i class="fas fa-cart-shopping" onclick="showcart()"></i>
+    <span class="cart-count" >0</span>
+</div>
+    </div>
+
+
+    <div class="cart-list" id="CART">
+
+    <div class="cartClose" onclick="hideCart()">
+                <div class="stick frst"></div>
+                <div class="stick scnd"></div>
+            </div>
+
+
+<div id="ccartt">
+    <h1>Items Added</h1>
+        <ul class="cart-items"></ul>
+        <div class="divider forCart"></div>
+
+        <div class="tolt">
+            <h2 class="tt">Total</h2>    
+            <p id="total">0</p>
+        </div>
+        <div class="center">
+        <button class="subt" onclick="orderDone()">Place Order</button>
+        </div>
+</div>
+
+        
+
+
+        <div class="order-done" id="order-done">
+            <div class="order-image">
+                <img src="Images/checkm.png" alt="">
+            </div>
+            <div class="txt">
+                <p> Thanks for your Order</p></div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <main>
+        <section id="JHero">
+            <div class="hero">
+            <div class="left">
+                <h3>Crafted to Golden Perfection</h3>
+                <h1>Indulge in Golden Perfection</h1>
+                <p>Experience traditional pizza craftsmanship reimagined for the modern palate. Every slice tells a story of passion, quality, and golden perfection.</p>
+                <a href="#menu" class="heroBtn btn-one">Explore Menu</a>
+                <a href="#boook" class="heroBtn btn-two">Reserve Table</a>
+                <div class="divider"></div>
+                <div class="grid">
+                    <div class="box">
+                        <h3>15+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="box">
+                        <h3>50+</h3>
+                        <p>Signature Dishes</p>
+                    </div>
+                    <div class="box"> 
+                        <span class="staH3">
+                        <h3>5</h3><i class="fa-solid fa-star"></i>
+
+                        </span>
+                        <p>Rated Excellence</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="imageBox">
+                    <img src="Images/luxpiz.webp" alt="">
+                </div>
+                <div class="imageBox">
+                    <img src="Images/cocktail.webp" alt="">
+                </div>
+                <div class="imageBox">
+                    <img src="Images/fries.webp" alt="">
+                </div>
+                <div class="imageBox">
+                    <img src="Images/spag.webp" alt="">
+                </div>
+            </div>
+        </div>   
+        </section>
+
+        <section id="menu">
+            <div class="centetx">
+            <h4>Discover</h4>
+            <h1>Our Menu</h1>
+            <p>From artisan crusts to golden toppings, every pizza reflects care, craftsmanship, and flavor.</p>
+            </div>
+
+
+            <div class="button-navs">
+                <button class="butt" id="first" onclick="filter('.card' ,this)">All</button>
+                <button class="butt" id="sec" onclick="filter('.pizza',this)">Signature Pizzas</button>
+                <button class="butt" id="thd" onclick="filter('.gourmet',this)">Gourmet Toppings</button>
+                <button class="butt" id="frt" onclick="filter('.appet',this)">Appetizers</button>
+                <button class="butt" id="ft" onclick="filter('.bev',this)">Beverages</button>
+            </div>
+
+
+            <div class="menu-grid">
+                <div class="card pizza">
+                    <div class="image">
+                        <img src="Images/marg.webp" alt="">
+                    </div>
+                    <div class="details">
+                        <div class="name-price">
+                        <h2 class="item">Gold Margherita Pizza</h2>
+                        <h3 class="price">$16.99</h3>
+                        </div>
+                        <p>Classic tomato base, buffalo mozzarella, fresh basil, golden crust</p>
+                        <p class="result"><i class="fas fa-check" ></i></p>                                               
+                        <button id="butom" onclick="add(this)">Add to Order</button>
+                        <button id="butomNN" class="Remove" onclick="remove(this)">Remove from Cart</button>
+                    </div>
+                </div>
+
+
+
+            <div class="card pizza">
+                    <div class="image">
+                        <img src="Images/mush.webp" alt="">
+                    </div>
+                    <div class="details">
+                        <div class="name-price">
+                        <h2 class="item">Truffle Mushroom Pizza</h2>
+                        <h3 class="price">$18.99</h3>
+                        </div>
+                        <p>Creamy truffle sauce, mozzarella, wild mushrooms, fresh arugula</p>
+                        <p id="result"><i class="fas fa-check" ></i></p>                        
+                        <button id="butom" onclick="add(this)">Add to Order</button>
+                        <button id="butomNN" class="Remove" onclick="remove(this)">Remove from Cart</button>
+                    </div>
+                </div>
+
+
+
+
+             <div class="card gourmet">
+                    <div class="image">
+                        <img src="Images/pig.webp" alt="">
+                    </div>
+                    <div class="details">
+                        <div class="name-price">
+                        <h2 class="item">Prosciutto & Fig</h2>
+                        <h3 class="price">$21.99</h3>
+                        </div>
+                        <p>Fresh tomato sauce, buffalo mozzarella, basil, golden crust</p>
+                        <p id="result"><i class="fas fa-check" ></i></p>
+                        <button id="butom" onclick="add(this)">Add to Order</button>
+                        <button id="butomNN" class="Remove" onclick="remove(this)">Remove from Cart</button>
+                    </div>
+                </div>
+
+
+
+            <div class="card gourmet">
+                    <div class="image">
+                        <img src="Images/smok.webp" alt="">
+                    </div>
+                    <div class="details">
+                        <div class="name-price">
+                        <h2 class="item">Smoked Salmon</h2>
+                        <h3 class="price">$8.99</h3>
+                    </div>
+                        <p>White truffle oil, wild mushrooms, mozzarella, arugula</p>
+                        <p id="result"><i class="fas fa-check" ></i></p>
+                        <button id="butom" onclick="add(this)">Add to Order</button>
+                        <button id="butomNN" class="Remove" onclick="remove(this)">Remove from Cart</button>
+            </div>
+                </div>
+
+
+                
+
+             <div class="card appet">
+                    <div class="image">
+                        <img src="Images/b.webp" alt="">
+                    </div>
+                    <div class="details">
+                        <div class="name-price">
+                        <h2 class="item">Bruschetta Trio</h2>
+                        <h3 class="price">$78.99</h3>
+                        </div>
+                        <p>Tomato basil, mushroom, and ricotta honey</p>
+                        <p id="result"><i class="fas fa-check" ></i></p>
+                        <button id="butom" onclick="add(this)">Add to Order</button>
+                        <button id="butomNN" class="Remove" onclick="remove(this)">Remove from Cart</button>
+                    </div>
+                </div>
+
+
+
+            <div class="card appet">
+                    <div class="image">
+                        <img src="Images/galfri.webp" alt="">
+                    </div>
+                    <div class="details">
+                        <div class="name-price">
+                        <h2 class="item">Garlic Parmesan Fries</h2>
+                        <h3 class="price">$12.99</h3>
+                        </div>
+                        <p>Crispy fries tossed in garlic butter and parmesan</p>
+                        <p id="result"><i class="fas fa-check" ></i></p>
+                         <button id="butom" onclick="add(this)">Add to Order</button>
+                        <button id="butomNN" class="Remove" onclick="remove(this)">Remove from Cart</button>
+                    </div>
+                </div> 
+
+            <div class="card bev">
+                    <div class="image">
+                        <img src="Images/lette.webp" alt="" class="latte">
+                    </div>
+                    <div class="details">
+                        <div class="name-price">
+                        <h2 class="item">Matcha Latte</h2>
+                        <h3 class="price">$14.99</h3>
+                        </div>
+                        <p>Creamy green tea latte, lightly sweetened</p>
+                        <p id="result"><i class="fas fa-check" ></i></p>                        
+                        <button id="butom" onclick="add(this)">Add to Order</button>
+                        <button id="butomNN" class="Remove" onclick="remove(this)">Remove from Cart</button>
+                    </div>
+                </div> 
+
+            <div class="card bev">
+                    <div class="image">
+                        <img src="Images/Yuz.webp" alt="">
+                    </div>
+                    <div class="details">
+                        <div class="name-price">
+                        <h2 class="item">Yuzu Sparkler</h2>
+                        <h3 class="price">$7.99</h3>
+                        </div>
+                        <p>Refreshing citrus soda with yuzu infusion</p>
+                        <p id="result"><i class="fas fa-check"></i></p>                        
+                        <button id="butom" onclick="add(this)">Add to Order</button>
+                        <button id="butomNN" class="Remove" onclick="remove(this)">Remove from Cart</button>
+                    </div>
+                </div> 
+
+ <div class="card bev">
+                    <div class="image">
+                        <img src="Images/boba.webp" alt="">
+                    </div>
+                    <div class="details">
+                        <div class="name-price">
+                        <h2 class="item">Golden Milk Boba</h2>
+                        <h3 class="price">$25.99</h3>
+                        </div>
+                        <p>Creamy milk tea with brown sugar pearls.</p>
+                        <p id="result"><i class="fas fa-check"></i></p> 
+                        
+    
+
+                        <button id="butom" onclick="add(this)">Add to Order</button>
+                        <button id="butomNN" class="Remove" onclick="remove(this)">Remove from Cart</button>
+                    </div>
+                </div> 
+
+
+            </div>
+
+
+        </section>
+
+<section id="chefs">
+    <div class="centetx">
+    <h4>The Golden Team</h4>
+    <h1>Our Pizza Artisans</h1>
+    <p>Experience and passion baked in gold.</p>
+    </div>
+
+    <div class="chef-grid">
+        <div class="chef-card">
+            <div class="chef-image">
+                <img src="Images/male-chef.webp" alt="">
+            </div>
+            <div class="chef-details">
+            <h2>Chef Vendetta</h2>
+            <p>Head Chef & Owner</p>
+            <p class="des">25 years of mastery in artisan pizza. Trained in Italy’s finest kitchens, bringing golden perfection to every slice.</p>
+            </div>
+        </div>
+        <div class="chef-card">
+           <div class="chef-image">
+            <img src="Images/chef.webp" alt="">
+           </div>
+            <div class="chef-details">
+            <h2>Chef Adawiya</h2>
+            <p>Pizza Chef & Culinary Director</p>
+            <p class="des">15 years perfecting the art of artisan pizza, blending seasonal ingredients with traditional Italian techniques to create slices of golden perfection</p>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+
+</section>
+
+
+
+<section id="reviews">
+            <div class="centetx">
+            <h4>Riviews</h4>
+            <h1>Guest Experiences</h1>
+            </div>
+
+            <div class="comments">
+                <div class="Cbox">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="note">
+                        <p>The best pizza experience in the city! Every slice is crafted with care, with golden perfection in every bite. Dining here feels like a journey into artisan pizza mastery.</p>
+                    </div>
+                    <div class="user">
+                        <p class="name">Sarah Kingston</p>
+                        <p class="date">January 2026</p>
+                    </div>
+                </div>
+                <div class="Cbox">
+                    <i class="fas fa-quote-right"></i>
+                        <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="note">
+                        <p>A perfect blend of artisanal flavors and luxurious presentation. From the hand-stretched dough to the gourmet sides and decadent desserts, every bite shows incredible attention to detail. Dining here is pure indulgence</p>
+                    </div>
+                    <div class="user">
+                        <p class="name">Diana Larson</p>
+                        <p class="date">December 2025</p>
+                    </div>
+                </div>
+                <div class="Cbox">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="note">
+                        <p>From the golden artisan pizzas to the perfectly crafted desserts and sides, every dish is a masterpiece. The flavors, presentation, and attention to detail make every visit feel truly specia</p>
+                    </div>
+                    <div class="user">
+                        <p class="name">Tim  Green</p>
+                        <p class="date">November 2025</p>
+                    </div>
+                </div>
+            </div>
+
+</section>
+
+<section id="reserva">
+            <div class="centetx">
+            <h4>RESERVATION</h4>
+            <h1>Dine with Us</h1>
+            <p>Reserve now and enjoy a luxurious pizza experience</p>
+            </div>
+
+
+    <div class="booking">
+        <div class="info" id="conta">
+            <h1>Visit Us</h1>
+                <div class="address">
+                    <div class="icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="det">
+                        <h4>Address</h4>
+                        <p>452 vendetta Street</p>
+                        <p>Atlanta, GA 30033</p>
+                    </div>
+                </div>
+
+
+
+                <div class="address">
+                    <div class="icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="det">
+                        <h4>Phone</h4>
+                        <p>+233 592041356</p>
+                    </div>
+                </div>
+
+
+                <div class="address">
+                    <div class="icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="det">
+                        <h4>Email</h4>
+                        <p>support@thegoldendough.com</p>
+                    </div>
+                </div>
+
+
+                <div class="address">
+                    <div class="icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="det">
+                        <h4>Hours</h4>
+                        <p>Monday - Friday: 10:00AM - 11:00PM</p>
+                        <p>Saturday - Sunday: 12:00PM - 11:00PM</p>
+                    </div>
+                </div>
+
+                <div class="notee">
+                    <h2>Important Notes</h2>
+                    <li>Reservations recommended for parties of 4 or more</li>
+                    <li>Omakase experience requires 48-hour advance notice</li>
+                    <li>Please inform us of any dietary restrictions</li>
+                    <li>Casual to smart casual dress code</li>
+                </div>
+
+
+        </div>
+
+        
+        <div class="form" id="boook">
+            <h1>Make a Reservation</h1>
+            <form action="">
+                <div class="fulllenght">
+                <label for="Fname">Full Name *</label>
+                <input type="text" name="Fname" id=""  required>
+                </div>
+            <div class="contact">
+                <div class="CBox">
+                    <label for="email">Email *</label>
+                    <input type="email"  required>
+                    </div>
+                <div class="CBox">
+                    <label for="phone">Phone *</label>
+                    <input type="tel"  required minlength="10" maxlength="10">
+                    </div>
+                </div>
+
+            <div class="time">
+                <div class="Tbox">
+                    <label for="date">Date *</label>
+                    <input type="date"  required>
+                 </div>
+                <div class="Tbox">
+                    <label for="time">Time *</label>
+                    <input type="time"  required>
+                </div>
+
+            </div>
+
+<div class="fulllenght">
+ <label for="guest">Number of Guests</label>
+                <select name="guest" id="">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7+</option>
+                </select>
+
+                <label for="request">Special Requests</label>
+                <textarea name="request" id="" rows="5"></textarea>
+                <input type="submit" value="Request Reservation" >
+</div>
+               
+
+
+            </form>
+        </div>
+
+        <div class="checkMark" id="done">
+            <div class="img">
+                <img src="Images/checkm.png" alt="">
+            </div>
+            <div class="txt">
+                <p> Thank you for your Reservation</p></div>
+        </div>
+
+    </div>
+
+
+
+</section>
+
+
+
+    </main>
+    
+    
+    
+<footer>
+
+<div class="footer-shift">
+
+ 
+<div class="ftdivide">
+            <div class="site">
+                <p class="site-name">The Golden Dough</p>
+                <p class="decs">Artisan pizzas and gourmet dishes crafted with passion and precision. Experience golden flavors, refined ingredients, and elevated dining in every bite</p>
+<i class="fab fa-facebook-f"></i>
+<i class="fab fa-tiktok"></i>
+<i class="fab fa-instagram"></i>
+
+            </div>
+            <div class="Quick">
+                <p class="hd">Quick Links</p>
+                <a href="#JHero">Menu</a>
+                <a href="#chefs">Our Chefs</a>
+                <a href="#boook">Reservations</a>
+                <a href="mailto:amgboye@gmail.com">Private Events</a>
+            </div>
+            <div class="conts">
+                <h4>Contacts</h4>
+                <p>452 vendetta Street</p>
+                <p>Atlanta, Ga 30033</p>
+                <p>+233 000000000</p>
+                <p>support@thegoldendough.com</p>
+            </div>
+        </div>
+
+
+        <div class="copy">
+            <div class="year">
+               <p style="text-align: center;"> &copy; 2026 The Golden Dough. <br> All rights reserved.</p>
+            </div>
+            <div class="terms">
+                <a href="">Privacy Police</a>
+                <a href="">Terms of Service</a>
+            </div>
+        </div>
+
+
+</div>   
+
+
+    </footer>
+    <script src="actions.js"></script>
+</body>
+</html>
