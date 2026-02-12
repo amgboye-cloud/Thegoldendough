@@ -862,13 +862,14 @@ footer{
 }
 
 
-input[type="text"],input[type="email"],input[type="date"],input[type="time"],textarea, option{
+input[type="text"],input[type="email"],input[type="date"],input[type="time"],input[type="tel"],textarea, option{
     padding: 10px;
     font-size: 17px;
 }
 
 select{
     font-size: 17px;
+    padding: 10px;
 }
 
 
